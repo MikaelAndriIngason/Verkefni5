@@ -1,0 +1,201 @@
+body{
+	background-color: pink;
+	line-height: 1.2em;
+	font-family:Arial, helvetica, sans-serif;
+	margin: 0 auto;
+	max-width: 70em;
+
+	display: grid;
+	grid-template-rows: .2fr 3fr auto 51px;
+	grid-template-columns: 100%;
+	grid-template-areas: "header"
+	                     "section"
+	                     "footer"
+	                     "nav";
+}
+header,footer,aside,article{
+	padding: 1em;
+}
+aside{
+	border: 1px solid #ededed;
+}
+section{
+	display: grid;
+	grid-template-rows: 1fr .25fr .25fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "midja"
+						 "vinstri"
+	                     "haegri";
+}
+nav{
+	background-color: #64e077;
+	grid-area: nav;
+}
+header{
+	text-align: center;
+	background-color: #2d2d2d;
+	color: white;
+	grid-area: header;
+}
+section{
+	grid-area: section;
+}
+footer{
+	text-align: center;
+	color: white;
+	background-color: #2d2d2d;
+	grid-area: footer;
+}
+.haegri{
+	background-color: #e2e2e2;
+	grid-area: haegri;
+}
+.vinstri{
+	background-color: #e2e2e2;
+	grid-area: vinstri;
+}
+.midja{
+	background-color: white;
+	grid-area: midja;
+}
+a{
+	color: #64e077;
+	text-decoration: none;
+	font-weight: bold;
+}
+nav a{
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 1em 0;
+	text-align: center;
+}
+nav a:hover {
+	color: #64e077;
+	background: white; 
+}
+.topmenu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.myndir{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+.myndir img{
+	display: block;
+	width: 140px;
+	margin: auto;
+
+}
+picture img{
+	width: 100%;
+}
+.media-links a{
+	color: white;
+	display: inline-block;
+	width: 2.5em;
+	height: 2.5em;
+	text-align: center;
+	line-height: 2.5em;
+}
+.media-links a:nth-child(1){
+	background-color: #55acee;
+}
+.media-links a:nth-child(2){
+	background-color: #e52d27;
+}
+.media-links a:nth-child(3){
+	background-color: #f7a164;
+}
+.media-links a:nth-child(4){
+	background-color: #3b5998;
+}
+#menu-toggle:checked ~ .topnav{
+	bottom: 51px;
+}
+#menu-toggle{
+	display: none;
+}
+label{
+	z-index: 2;
+	background-color: #ceead2;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 51px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 51px;
+}
+.topnav{
+	z-index: 1;
+	position: fixed;
+	bottom: -102px;
+	width: 100%;
+	transition: bottom .4s;
+}
+.logo{
+	fill: white; 
+	width: 100px;
+    height: 100px;
+}
+
+/*Grunnsnið endar*/
+
+@media screen and (min-width: 37.5em){
+
+	body{
+		grid-template-rows: 50px .2fr .5fr .25fr;
+		grid-template-areas: "nav"
+		                     "header"
+	                     	 "section"
+	                     	 "footer";
+	}
+	section{
+		grid-template-rows: 1fr .5fr;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "midja midja"
+		                     "vinstri haegri";	
+	}
+	.topmenu{
+		display: flex;
+		justify-content: center;
+
+	}
+	nav li{
+		width: 250px;
+	}
+	.myndir{
+		flex-flow: row wrap;
+	}
+	label {
+		display: none;
+	}
+	.topnav{
+		position: static;
+	}
+}
+@media screen and (min-width: 48em){
+
+	section{
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: "vinstri midja haegri"
+		                     "vinstri midja haegri";	
+	}
+	.myndir{
+		flex-flow: row nowrap;
+	}
+
+	.media-links{
+		position: absolute;
+		left: 0;
+		top: 300px;
+	}
+	.media-links a{
+		display: block;
+	}
+}

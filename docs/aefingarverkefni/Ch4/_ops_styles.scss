@@ -1,0 +1,8 @@
+$breyta1: 5em;
+$breyta2: 20px;
+$breyta3: 6em;
+$breyta4: ($breyta1 * $breyta2) / $breyta3;
+
+header{
+	padding: $breyta4;
+}

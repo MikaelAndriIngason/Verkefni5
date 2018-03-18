@@ -1,0 +1,60 @@
+/*==================================*/
+/* Body */
+/*==================================*/
+
+$BaseMeasure: 1em;
+
+@mixin SimpleBox(){
+	text-align: center;
+	background-color: #2d2d2d;
+	color: white;
+	padding: $BaseMeasure;
+}
+
+body{
+	background-color: pink;
+	line-height: 1.2em;
+	font-family:Arial, helvetica, sans-serif;
+	margin: 0 auto;
+	max-width: 70em;
+
+	header{
+		@include SimpleBox();
+		grid-area: header;
+		img{
+			width: 2em;
+			height: 2em;
+		}
+	}
+	footer{
+		@include SimpleBox();
+		grid-area: footer;
+	}
+
+	section{
+		grid-area: section;
+
+		article{
+			background-color: white;
+			padding: $BaseMeasure;
+			grid-area: center;
+		}
+
+		aside{
+			border: 1px solid #ededed;
+			background-color: #f2f2f2;
+			padding: $BaseMeasure;
+			.right {
+				grid-area: right;
+			}
+			.left{
+				grid-area: left;
+			}
+		}
+	}
+	a{
+		color: #64e077;
+		text-decoration: none;
+		font-weight: bold;
+	}
+}

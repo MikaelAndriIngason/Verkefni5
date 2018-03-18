@@ -1,0 +1,14 @@
+/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */
+
+$myColor1: navy;                            // named color value
+$myColor2: #000080;  
+$myColor3: #ffdc9b;                        // hex color value
+$bodyColor: #82B7B1;   
+$myStringVar: " with an appended string, which has been darkened by 40%";   // string variable 
+$myFontSize: 18px;                          // numeric value
+$thinBorder: 1px solid $myColor1;           // multi-value variable
+$paddingVar: 15px 15px 15px 15px;           // multi-value variable
+

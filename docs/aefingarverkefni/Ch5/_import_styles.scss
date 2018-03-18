@@ -1,0 +1,25 @@
+/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */
+
+
+h1, h2 {
+    color: lighten($myColor1, 50%);
+}
+
+body{
+	background-color: invert($bodyColor)
+}
+
+#mypara {
+    font-size: $myFontSize;
+    border: $thinBorder;
+    padding: $paddingVar;
+}
+
+#mypara:after {
+    content: $myStringVar;
+    color: darken($myColor3, 40%)
+}
+

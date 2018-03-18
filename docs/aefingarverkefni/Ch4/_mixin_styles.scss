@@ -1,0 +1,25 @@
+$box-color: #a5e2c3;
+
+@mixin bodyValues($s: 80em){
+	max-width: $s;
+	background-color: pink;
+	margin: 0 auto;
+	font-family: Arial;
+}
+@mixin BasicBox($b: $box-color, $c: $string-val){
+	padding: $numeric-val;
+	background-color: $b; 
+	color: $c;
+}
+
+body{
+	@include bodyValues;
+}
+
+footer{
+	@include BasicBox($c: white);
+}
+
+p{
+	@include BasicBox();
+}

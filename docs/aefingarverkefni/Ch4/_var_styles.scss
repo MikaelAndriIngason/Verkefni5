@@ -1,0 +1,23 @@
+$color-val: #cbd0d8;
+$color-val2: #99a0aa;
+$string-val: tomato;
+$numeric-val: 1.5em;
+$multi-value: solid black 1px;
+
+h1{
+	color: $string-val;
+}
+div{
+	border: $multi-value;
+	padding: $numeric-val;
+	background-color: $color-val;
+}
+.list1{
+	background-color: $color-val2;
+	padding: $numeric-val;
+
+	&:hover{
+		background-color: $string-val;
+	}
+}
+

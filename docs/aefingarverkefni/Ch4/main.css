@@ -1,0 +1,52 @@
+/* Variable styles */
+h1 {
+  color: tomato; }
+
+div {
+  border: solid black 1px;
+  padding: 1.5em;
+  background-color: #cbd0d8; }
+
+.list1 {
+  background-color: #99a0aa;
+  padding: 1.5em; }
+  .list1:hover {
+    background-color: tomato; }
+
+/* Mixin styles */
+body {
+  max-width: 80em;
+  background-color: pink;
+  margin: 0 auto;
+  font-family: Arial; }
+
+footer {
+  padding: 1.5em;
+  background-color: #a5e2c3;
+  color: white; }
+
+p {
+  padding: 1.5em;
+  background-color: #a5e2c3;
+  color: tomato; }
+
+/* Nested styles */
+header {
+  background-color: #8c9acc; }
+  header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bolder; }
+  header nav {
+    text-align: center; }
+    header nav a {
+      text-decoration: none;
+      color: #8c24e5; }
+      header nav a:hover {
+        color: white; }
+
+/* Operators */
+header {
+  padding: 16.6666666667px; }
+
+/*# sourceMappingURL=main.css.map */
